@@ -1,0 +1,45 @@
+{% extends "blog/base.html"%}
+{% block content %}
+<form method="post">
+    {% csrf_token %} 
+
+    <label for="NameOfMovie">Name Of Movie:</label>
+    <br>
+    <input id="NameOfMovie" type="text" name="NameOfMovie" required>
+    <br>
+    <br>
+    <label for="Language">Language:</label>
+    <br>
+    <select name="Language" id="Language" >
+        <option value="Hindi">Hindi</option>
+        <option value="Tamil">Tamil</option>
+        <option value="English">English</option>
+        <option value="Telugu">Telugu</option>
+      </select>
+    <br>
+    <br>
+    <label for="AudienceType">Audience Type:</label>
+    <br>
+    <select name="AudienceType" id="AudienceType" >
+      <option value="A">A</option>
+      <option value="U/A">U/A</option>
+      <option value="U">U</option>
+    </select>
+    <br>
+    <br>
+    <label for="Release Date">Release Date:</label>
+    <br>
+    <input id="ReleaseDate" type="date" name="ReleaseDate" required>
+    <br>
+    <label for="Budget">Budget:</label>
+    <br>
+    <input id="Budget" type="number" name="Budget" required>
+    <br>
+    <br>   
+    <input type="submit" value="add" >
+    <br>
+    <input type="submit" value="SUBMIT" formaction="/output/">
+      
+</form>
+
+{% endblock content %}

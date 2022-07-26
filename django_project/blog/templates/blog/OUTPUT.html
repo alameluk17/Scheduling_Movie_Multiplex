@@ -1,0 +1,12 @@
+{% extends "blog/base.html"%}
+{% block content %}
+<h1>OUTPUT TIMETABLE</h1>
+{% for i in slots %} 
+    <h4>    {{i}}</h4>
+{% endfor%}
+
+{% for i in TT %}
+    <p>{{i}}</p>
+{% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends "blog/base.html"%}
+{% block content %}
+    <h1>INPUt PAGE</h1>
+    <form action="" method="post">
+        {% csrf_token %} 
+ 
+        <input id="NoOfMovies" type="number" name="NoOfMovies">
+        <br>
+      
+        <input type="submit" value="SUBMIT" />
+        
+
+        
+
+{% endblock content %}
+
